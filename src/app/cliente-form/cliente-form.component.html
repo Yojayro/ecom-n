@@ -1,0 +1,52 @@
+<h1>Registro Especialidad </h1>
+<div>
+<form [formGroup]="clienteForm" (ngSubmit)="save()">
+    
+    <label>
+        Especialidad/Carrera:
+        <br>
+        <input type="text" formControlName="espe" name="espe" id="espe" required>
+       
+    </label>
+    <br>
+    <br>
+    <label>
+        Centro de Estudios :
+        <br>
+        <input type="text" formControlName="centro_estudios" name="centro_estudios" id="centro_estudios" required>
+    </label>
+    <br>
+    <br>
+    <label>
+        Nivel:
+        <br>
+        <input type="text" formControlName="nivel" name="nivel" id="nivel" required>
+    </label>
+    <br>
+    <br>
+    <label>
+        SUNEDU:
+        <br>
+        <input type="date" formControlName="sunedu" name="sunedu" id="sunedu" required>
+    </label>
+    <br>
+    
+
+    <br>
+    <label>
+        Egreso:
+        <br>
+        <input type="date" formControlName="egreso" name="egreso" id="egreso" required>
+    </label>
+    <br>
+   
+    <div class="form-group">
+            <label for="exampleInputFile">Foto Del Titulo</label>
+            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+            <small id="fileHelp" class="form-text text-muted">Seleccione su Titulo .</small>
+          </div>
+          <button type="submit" [disabled]="!clienteForm.valid" class="btn btn-primary">Agregar Titulo</button>
+        </form>
+        
+
+</div>
